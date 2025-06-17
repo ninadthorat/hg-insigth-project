@@ -16,7 +16,7 @@ default_args = {
 }
 
 with DAG('modular_elt_pipeline',
-         schedule_interval=None,
+         schedule_interval="@hourly",
          catchup=False,
          default_args=default_args) as dag:
 
