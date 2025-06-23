@@ -68,12 +68,10 @@ docker-compose up --build -d
 ### 🌐 Airflow
 
 - Open: [http://localhost:8080](http://localhost:8080)
-- **Get auto-generated password:**
-  ```bash
-  docker logs airflow-webserver 2>&1 | grep -i password
+
   ```
 - Username: `airflow`
-- Paste the printed password from logs
+- Password: `hginsigth123`
 - Trigger DAG: `churn_etl_dag`
 
 ### 📊 Metabase
@@ -104,6 +102,10 @@ Runs **hourly** via Airflow's `@hourly` schedule.
 
 ## 📸 Dashboard
 
+
+
+- Go to `Out analytics' from collections
+- Selct `Customer Churn` dashboard
 The Metabase dashboard shows:
 
 - Churn rate
