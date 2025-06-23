@@ -80,7 +80,7 @@ docker-compose up --build -d
 - Connect to DB:
   - Host: `pg-staging`
   - Port: `5432`
-  - User: `user`, Password: `password`
+  - User: `ninadofficialid@gmail.com`, Password: `hginsigth@123`
   - DB name: `staging_db`
 - Explore the processed data: `processed_customer_data` table
 
