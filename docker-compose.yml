@@ -33,13 +33,15 @@ services:
       AIRFLOW__CORE__FERNET_KEY: 'D5LmG0-rSgJUG6T6KoE2INqgN5gAcz5dvU2NlZVeDJY='
       AIRFLOW__CORE__LOAD_EXAMPLES: 'False'
       AIRFLOW__WEBSERVER__EXPOSE_CONFIG: 'True'
-    depends_on:
-      - postgres
     volumes:
       - ./airflow/dags:/opt/airflow/dags
       - ./etl:/opt/airflow/etl
       - ./data:/opt/airflow/data
-    command: standalone
+      - ./airflow/init_user.sh:/init_user.sh
+    depends_on:
+      - postgres
+    command: [ "bash", "/init_user.sh" ]
+
 
 volumes:
   pgdata:
