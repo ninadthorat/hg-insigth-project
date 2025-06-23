@@ -18,6 +18,8 @@ services:
     container_name: metabase
     ports:
       - "3000:3000"
+    volumes:
+      - ./metabase-data:/metabase.db
 
   airflow:
     build: ./airflow
